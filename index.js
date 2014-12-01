@@ -45,7 +45,7 @@ module.exports = function (app, db) {
 
       })
     }
-    if (opts.method && opts.path) app[opts.method](opts.path, middleware)
+    if (app) app[opts.method](opts.path, middleware)
     return middleware
   }
 }
